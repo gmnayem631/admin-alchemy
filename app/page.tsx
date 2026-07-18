@@ -27,7 +27,7 @@ export default function Home() {
           icon={<MessageCircle className="text-slate-500" size={64} />}
         ></DashboardCard>
       </div>
-      <PostsTable></PostsTable>
+      <PostsTable title="Latest Posts" limit={5}></PostsTable>
     </>
   );
 }
