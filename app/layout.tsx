@@ -50,13 +50,7 @@ export default function RootLayout({
           storageKey="dashboard-theme"
           disableTransitionOnChange
         >
-          <Navbar></Navbar>
-          <div className="flex">
-            <div className="hidden md:block h-screen">
-              <Sidebar></Sidebar>
-            </div>
-            <div className="p-5 w-full md:max-w-285">{children}</div>
-          </div>
+          {children}
           <Toaster />
         </ThemeProvider>
       </body>
