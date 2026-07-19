@@ -87,39 +87,34 @@ const LoginForm = () => {
               />
             </FieldGroup>
 
-            <form
-              onSubmit={form.handleSubmit(handleSubmit)}
-              className="space-y-8"
-            >
-              <FieldGroup>
-                <Controller
-                  name="password"
-                  control={form.control}
-                  render={({ field, fieldState }) => (
-                    <Field data-invalid={fieldState.invalid}>
-                      <FieldLabel
-                        htmlFor={field.name}
-                        className="uppercase text-xs font-bold text-zinc-500 dark:text-white"
-                      >
-                        Password
-                      </FieldLabel>
-                      <Input
-                        type="password"
-                        {...field}
-                        id={field.name}
-                        aria-invalid={fieldState.invalid}
-                        className="bg-slate-100 dark:bg-slate-500 border-0 focus-visible:ring-0 text-black dark:text-white focus-visible:ring-offset-0"
-                        placeholder="Enter Title"
-                      />
-                      {fieldState.invalid && (
-                        <FieldError errors={[fieldState.error]} />
-                      )}
-                    </Field>
-                  )}
-                />
-              </FieldGroup>
-              <Button className={"w-full cursor-pointer"}>Sign In</Button>
-            </form>
+            <FieldGroup>
+              <Controller
+                name="password"
+                control={form.control}
+                render={({ field, fieldState }) => (
+                  <Field data-invalid={fieldState.invalid}>
+                    <FieldLabel
+                      htmlFor={field.name}
+                      className="uppercase text-xs font-bold text-zinc-500 dark:text-white"
+                    >
+                      Password
+                    </FieldLabel>
+                    <Input
+                      type="password"
+                      {...field}
+                      id={field.name}
+                      aria-invalid={fieldState.invalid}
+                      className="bg-slate-100 dark:bg-slate-500 border-0 focus-visible:ring-0 text-black dark:text-white focus-visible:ring-offset-0"
+                      placeholder="Enter Title"
+                    />
+                    {fieldState.invalid && (
+                      <FieldError errors={[fieldState.error]} />
+                    )}
+                  </Field>
+                )}
+              />
+            </FieldGroup>
+            <Button className={"w-full cursor-pointer"}>Sign In</Button>
           </form>
         </CardContent>
       </Card>
