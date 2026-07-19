@@ -8,8 +8,8 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
       {" "}
       <Navbar />
       <div className="flex">
-        <div className="hidden md:block h-screen">
-          <Sidebar></Sidebar>
+        <div className="hidden md:block h-screen sticky top-0">
+          <Sidebar />
         </div>
         <div className="p-5 w-full md:max-w-285">{children}</div>
       </div>
