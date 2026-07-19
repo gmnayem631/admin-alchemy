@@ -1,7 +1,11 @@
-import React from "react";
+import AuthTabs from "@/components/auth/AuthTabs";
 
 const AuthPage = () => {
-  return <div>Auth Page</div>;
+  return (
+    <>
+      <AuthTabs></AuthTabs>
+    </>
+  );
 };
 
 export default AuthPage;
